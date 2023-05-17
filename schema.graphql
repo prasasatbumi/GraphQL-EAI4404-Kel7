@@ -1,0 +1,18 @@
+type Tour {
+  id: ID!
+  name: String!
+  origin: String!
+  category: String!
+}
+
+type Query {
+  getAllTours: [Tour!]!
+  getTourById(id: ID!): Tour
+}
+
+type Mutation {
+  addTour(name: String!, origin: String!, category: String!): Tour!
+  updateTour(id: ID!, name: String, origin: String, category: String): Tour
+  deleteTour(id: ID!): ID
+
+}
